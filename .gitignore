@@ -35,7 +35,7 @@ build-*
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
-CMakeLists.txt.user
+CMakeLists.txt.user*
 Testing
 Makefile
 cmake_install.cmake
