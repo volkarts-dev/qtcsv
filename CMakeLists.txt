@@ -30,6 +30,7 @@ target_sources(${PROJECT_NAME} PRIVATE
     include/qtcsv/qtcsv_global.h
     include/qtcsv/reader.h
     include/qtcsv/stringdata.h
+    include/qtcsv/symbols.h
     include/qtcsv/variantdata.h
     include/qtcsv/writer.h
     sources/contentiterator.cpp
@@ -37,7 +38,6 @@ target_sources(${PROJECT_NAME} PRIVATE
     sources/filechecker.h
     sources/reader.cpp
     sources/stringdata.cpp
-    sources/symbols.h
     sources/variantdata.cpp
     sources/writer.cpp
 )
@@ -45,6 +45,9 @@ target_sources(${PROJECT_NAME} PRIVATE
 #use the QTCSV_LIBRARY define only for qtcsv build time to use export statements instead of import statements
 target_compile_definitions(${PROJECT_NAME} PRIVATE
     QTCSV_LIBRARY
+    QT_NO_CAST_FROM_ASCII
+    QT_NO_CAST_TO_ASCII
+)
 
 # include root project folder as private, because the source headers are included with source/*.h
 target_include_directories(${PROJECT_NAME}

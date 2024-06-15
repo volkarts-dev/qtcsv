@@ -1,7 +1,7 @@
 #include "include/qtcsv/reader.h"
 #include "include/qtcsv/abstractdata.h"
 #include "sources/filechecker.h"
-#include "sources/symbols.h"
+#include "qtcsv/symbols.h"
 #include <QDebug>
 #include <QFile>
 #include <QStringView>

@@ -22,7 +22,7 @@ namespace QtCSV {
         QFileInfo fileInfo(filePath);
         if (fileInfo.isAbsolute() && false == fileInfo.isDir()) {
             if (mustExist && false == fileInfo.exists()) { return false; }
-            if ("csv" != fileInfo.suffix()) {
+            if (QLatin1String("csv") != fileInfo.suffix()) {
                 qDebug() << __FUNCTION__  <<
                     "Warning - file suffix is not .csv";
             }

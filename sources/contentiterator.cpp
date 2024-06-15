@@ -1,5 +1,5 @@
 #include "sources/contentiterator.h"
-#include "sources/symbols.h"
+#include "qtcsv/symbols.h"
 
 using namespace QtCSV;
 

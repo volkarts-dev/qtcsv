@@ -162,8 +162,8 @@ bool WriterPrivate::writeToIODevice(
 // string.
 QString WriterPrivate::getTempFileName()
 {
-    const auto nameTemplate = QDir::tempPath() + "/qtcsv_" +
-        QString::number(QCoreApplication::applicationPid()) + "_%1.csv";
+    const auto nameTemplate = QDir::tempPath() + QLatin1String("/qtcsv_") +
+        QString::number(QCoreApplication::applicationPid()) + QLatin1String("_%1.csv");
 
     for (auto counter = 0; counter < std::numeric_limits<int>::max(); ++counter)
     {

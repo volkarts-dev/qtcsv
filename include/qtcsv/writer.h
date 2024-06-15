@@ -3,6 +3,7 @@
 
 #include "qtcsv/qtcsv_global.h"
 #include "abstractdata.h"
+#include "symbols.h"
 #include <QIODevice>
 #include <QList>
 #include <QString>
@@ -33,8 +34,8 @@ namespace QtCSV {
         static bool write(
             const QString& filePath,
             const AbstractData& data,
-            const QString& separator = QString(","),
-            const QString& textDelimiter = QString("\""),
+            const QString& separator = COMMA,
+            const QString& textDelimiter = DOUBLE_QUOTE,
             WriteMode mode = WriteMode::REWRITE,
             const QList<QString>& header = {},
             const QList<QString>& footer = {},
@@ -44,8 +45,8 @@ namespace QtCSV {
         static bool write(
             QIODevice& ioDevice,
             const AbstractData& data,
-            const QString& separator = QString(","),
-            const QString& textDelimiter = QString("\""),
+            const QString& separator = COMMA,
+            const QString& textDelimiter = DOUBLE_QUOTE,
             const QList<QString>& header = {},
             const QList<QString>& footer = {},
             QStringConverter::Encoding codec = QStringConverter::Utf8);
