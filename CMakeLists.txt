@@ -50,9 +50,11 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
 )
 
 # include root project folder as private, because the source headers are included with source/*.h
-target_include_directories(${PROJECT_NAME}
-    PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include>
-    PRIVATE .
+target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include>
+)
+target_include_directories(${PROJECT_NAME} PRIVATE
+    .
 )
 
 # set compiler flags for the library target
